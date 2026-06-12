@@ -1,0 +1,31 @@
+// Aguarda o DOM (HTML) carregar completamente
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Seleciona os elementos do formulário e da mensagem de sucesso
+    const formAgro = document.getElementById('form-agro');
+    const mensagemSucesso = document.getElementById('mensagem-sucesso');
+    const textoSucesso = document.getElementById('texto-sucesso');
+
+    // Escuta o evento de envio (submit) do formulário
+    formAgro.addEventListener('submit', (event) => {
+        // Impede a página de recarregar (comportamento padrão de formulários)
+        event.preventDefault();
+
+        // Captura os valores digitados pelos usuários
+        const nomeProdutor = document.getElementById('nome').value;
+        const nomeFazenda = document.getElementById('fazenda').value;
+        const tipoCultura = document.getElementById('cultura').value;
+
+        // Cria uma mensagem personalizada com os dados capturados
+        textoSucesso.innerHTML = `Olá <strong>${nomeProdutor}</strong>, a propriedade <strong>${nomeFazenda}</strong> focada no cultivo de <strong>${tipoCultura}</strong> foi integrada ao ecossistema AgroForte com sucesso!`;
+
+        // Exibe a div de sucesso removendo a classe 'hidden'
+        mensagemSucesso.classList.remove('hidden');
+
+        // Limpa os campos do formulário para um próximo cadastro
+        formAgro.reset();
+
+        // Rola a página suavemente até a mensagem de sucesso
+        mensagemSucesso.scrollIntoView({ behavior: 'smooth' });
+    });
+});
