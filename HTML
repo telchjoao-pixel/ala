@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroForte - Inovação no Campo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <h1>Agro<span>Forte</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cadastro">Cadastrar Fazenda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>O Futuro da Agricultura é Forte</h2>
+            <p>Tecnologia, sustentabilidade e alta produtividade para o seu negócio rural.</p>
+            <a href="#cadastro" class="btn-main">Começar Agora</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container sobre-section">
+        <h2>Nossos Pilares</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Gestão Inteligente</h3>
+                <p>Controle total da sua produção, desde o plantio até a colheita, com dados em tempo real.</p>
+            </div>
+            <div class="card">
+                <h3>Sustentabilidade</h3>
+                <p>Práticas que respeitam o meio ambiente e garantem a longevidade da sua terra.</p>
+            </div>
+            <div class="card">
+                <h3>Alta Performance</h3>
+                <p>Otimização de processos para maximizar seus lucros e reduzir desperdícios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cadastro" class="cadastro-section">
+        <div class="container form-container">
+            <h2>Unas-se ao AgroForte</h2>
+            <p>Cadastre sua propriedade e faça parte da nossa rede de monitoramento inteligente.</p>
+            
+            <form id="form-agro">
+                <div class="form-group">
+                    <label for="nome">Nome do Produtor:</label>
+                    <input type="text" id="nome" required placeholder="Ex: João Silva">
+                </div>
+                <div class="form-group">
+                    <label for="fazenda">Nome da Fazenda:</label>
+                    <input type="text" id="fazenda" required placeholder="Ex: Fazenda Bela Vista">
+                </div>
+                <div class="form-group">
+                    <label for="cultura">Principal Cultura:</label>
+                    <select id="cultura" required>
+                        <option value="">Selecione...</option>
+                        <option value="Soja">Soja</option>
+                        <option value="Milho">Milho</option>
+                        <option value="Algodão">Algodão</option>
+                        <option value="Pecuária">Pecuária / Gado</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Cadastrar Propriedade</button>
+            </form>
+
+            <div id="mensagem-sucesso" class="hidden">
+                <div class="alert">
+                    <h3>🎉 Cadastro Realizado com Sucesso!</h3>
+                    <p id="texto-sucesso"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AgroForte - Tecnologia e Campo conectados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
